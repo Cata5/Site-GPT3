@@ -198,6 +198,7 @@ img {
 }
 .container-text h1{
   color: white;
+  padding-right: 2rem ;
 }
 .container-text p{
   color:#81AFDD;
