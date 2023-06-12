@@ -138,12 +138,12 @@ img {
     color: white;
     position: relative;
     grid-column: 1;
-
+    padding-top: 2rem;
   }
   .content-container::after{
     content: "";
     left: 3rem ;
-    top: 1rem;
+    top: 2rem;
     position: absolute;
     width: 75px;
     height: 4px;
@@ -165,6 +165,9 @@ img {
     background-image: linear-gradient(to right, #AE67FA, #00FFA3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .middle h1{
+    max-width: 550px;
   }
   .high{
     display: grid;
@@ -194,14 +197,16 @@ img {
 }
 .container-content2{
   display: flex;
-
+  gap: 4vw;
 }
-.container-text h1{
+.container-text div h1{
   color: white;
-  padding-right: 2rem ;
+  max-width: 350px;
+  padding-right: 3rem;
 }
 .container-text p{
   color:#81AFDD;
+  max-width: 450px;
 }
 .light{
     width: 600px;
@@ -223,9 +228,10 @@ img {
 .container-text div{
   display: flex;
 }
-.container-content2 h1{
+.container-content2 > h1{
   max-width: 600px;
-  padding-right: 3rem;
+  font-size: 3rem;
+
 }
 .container-content2 div::before{
   content: "";
@@ -239,11 +245,15 @@ img {
 
 
 
-
+@media screen and (max-width: 1150px){
+.container-content2{
+  display: flex;
+  flex-direction: column ;
+}
+}
 @media screen and (max-width: 500px){
   .container-text div{
     display: block;
-
   }
   .container-text p{
     padding-left: .5rem;
@@ -251,7 +261,7 @@ img {
 }
 
 @media screen and (max-width: 900px){
-    .lower,.high,.container-content2{
+    .lower,.high{
         display: flex;
         flex-direction: column ;
     }
